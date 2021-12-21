@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+		<title>Menu latéral</title>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<img src="wanen_white.png" alt="logo" />
+			</div>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+		<header>
+			<button class="toggle" id="toggle">
+				<i class="fas fa-bars"></i>
+			</button>
+
+			<h1>Premier TP</h1>
+
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magni fugit possimus aut libero cupiditate aliquid, earum
+				error expedita dolorem.
+			</p>
+
+			<button class="sign" id="sign">S'inscrire</button>
+		</header>
+
+		<div class="container">
+			<h2>Ce qu'il faut savoir sur moi...</h2>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint nostrum, dignissimos dolore quae quibusdam ipsa animi
+				consequatur consectetur veritatis, laborum harum dicta! Error distinctio ratione quas, quaerat excepturi pariatur voluptas.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perferendis minima voluptates, voluptate soluta numquam nemo
+				ipsam possimus quo enim.
+			</p>
+
+			<h2>En savoir plus..</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusamus nemo voluptatibus sunt? Magni quisquam eum
+				earum, nisi sint veniam mollitia similique distinctio maiores nulla, quod ullam quam, assumenda facilis eius saepe atque et
+				reprehenderit perferendis suscipit ratione explicabo expedita doloribus eaque? Aut sunt culpa praesentium eum voluptatem in
+				nam!
+			</p>
+
+			<h2>Compétences</h2>
+			<ul>
+				<li>frontend HTML CSS SCSS SASS JS React jQuery</li>
+				<li>Backend PHP, Node JS, Symfony, Laravel</li>
+				<li>Instructeur: Youtube Coding city. Bientot sur site personnel</li>
+			</ul>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa nobis repudiandae saepe commodi quos dolor, atque
+				praesentium. Ex cumque quasi assumenda, quisquam perferendis quam debitis quo dolorem cum sunt consectetur nostrum odio in
+				voluptates, tempore reprehenderit! Quibusdam facere voluptates nemo corporis modi ad, nostrum dolor hic illo dolorem aliquid
+				fuga!
+			</p>
+		</div>
+
+		<div class="modal-container" id="modalContainer">
+			<div class="modal" id="modal">
+				<button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+				<div class="modal-header">
+					<h3>S'inscrire</h3>
+				</div>
+
+				<div class="modal-body">
+					<p>Rejoigneez-nous maintenant et profiter des offres à bas prix.</p>
+					<form class="modal-form">
+						<div class="group">
+							<label for="name">Nom: </label>
+							<input type="text" id="name" placeholder="Entrez votre nom." />
+						</div>
+						<div class="group">
+							<label for="email">Email: </label>
+							<input type="text" id="email" placeholder="Entrez votre email." />
+						</div>
+						<div class="group">
+							<label for="password">password: </label>
+							<input type="text" id="password" placeholder="Entrez votre password." />
+						</div>
+						<div class="group">
+							<label for="confirm password">confirmer password: </label>
+							<input type="text" id="confirm password" placeholder="co,nfirmer votre password." />
+						</div>
+
+						<input type="submit" value="s'inscrire" id="register" />
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,203 @@
+:root {
+	--modal-transition: 1s;
+	--primary-color: #0d4b53;
+	--secondary-color: #09d7e6;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: 'Tw Cen MT';
+}
+
+body {
+	margin: 0;
+	transition: transform 0.3s ease-in-out;
+}
+
+body.nav-show {
+	transform: translateX(200px);
+}
+
+nav {
+	background-color: var(--primary-color);
+	position: absolute;
+	color: #fff;
+	box-shadow: 1px 1px 3px rgba(200, 200, 200, 0.5);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 200px;
+	z-index: 1000;
+	transform: translateX(-100%);
+}
+
+nav .logo {
+	width: 150px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+nav .logo img {
+	width: 100%;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	border-bottom: 2px solid rgba(200, 200, 200, 0.25);
+}
+nav ul li:first-of-type {
+	border-top: 2px solid rgba(200, 200, 200, 0.25);
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	display: block;
+}
+
+nav ul li a:hover {
+	background-color: #fff;
+	color: var(--primary-color);
+}
+
+header {
+	background-color: var(--primary-color);
+	position: relative;
+	padding: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 130%;
+}
+
+header h1 {
+	margin-bottom: 30px;
+}
+
+header p {
+	margin: 30px 0;
+}
+
+button,
+input[type='submit'] {
+	background-color: var(--secondary-color);
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px 12px;
+}
+
+button:focus,
+input:focus {
+	outline: none;
+}
+
+.toggle {
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.sign {
+	font-size: 16px;
+	padding: 12px 30px;
+}
+
+.container {
+	padding: 40px;
+	font-size: 110%;
+}
+
+.modal-container {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	animation: displayModal var(--modal-transition) linear;
+}
+
+.modal-container.modal-show {
+	display: flex;
+}
+
+.modal {
+	position: relative;
+	background-color: #fff;
+	max-width: 100%;
+	width: 400px;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+	overflow: hidden;
+}
+
+.modal-header {
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 10px;
+}
+
+.modal-header h3 {
+	margin: 0;
+	font-size: 1.3rem;
+}
+
+.modal-body {
+	padding: 20px;
+}
+
+.group {
+	margin-bottom: 20px;
+}
+
+.modal-form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.modal-form input:not([type='submit']) {
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: 1px solid var(--primary-color);
+	transition: border-color 0.25s;
+}
+
+.modal-form input:focus:not([type='submit']) {
+	border-color: var(--secondary-color);
+}
+
+.close-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 20px;
+	background-color: transparent;
+}
+.modal-form input[type='submit'] {
+	font-size: 16px;
+}
+
+@keyframes displayModal {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
